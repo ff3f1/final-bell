@@ -1,0 +1,25 @@
+name: Final Bell archive tooling
+
+on:
+  push:
+    paths:
+      - 'tools/**'
+      - 'tests/**'
+      - '.github/workflows/archive-tooling.yml'
+  pull_request:
+    paths:
+      - 'tools/**'
+      - 'tests/**'
+      - '.github/workflows/archive-tooling.yml'
+  workflow_dispatch:
+
+jobs:
+  inventory-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run archive tooling tests
+        run: python -m unittest discover -s tests -v

@@ -66,7 +66,10 @@ class InventoryTests(unittest.TestCase):
         out.mkdir()
         external = self.root / 'external'
         external.mkdir()
-        (out / 'folder').symlink_to(external, target_is_directory=True)
+        try:
+            (out / 'folder').symlink_to(external, target_is_directory=True)
+        except (OSError, NotImplementedError):
+            self.skipTest('Creating directory symlinks is restricted on this system')
         with self.assertRaises(ValueError):
             module.extract_packs(self.zip_path, members, out)
         self.assertFalse((external / 'game.pck').exists())

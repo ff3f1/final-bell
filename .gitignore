@@ -1,0 +1,25 @@
+# Godot 4 import cache and local editor state
+.godot/
+# Godot editor temporary files, backups
+*.tmp
+*.bak
+*.blend1
+*.blend2
+# Exported builds and backup archives are hosted separately
+*.exe
+*.pck
+*.apk
+*.aab
+*.zip
+*.7z
+*.rar
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks

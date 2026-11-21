@@ -27,3 +27,7 @@ desktop.ini
 # Local archive inventories and recovered binaries
 final_bell_audit/
 FinalBell_Audit/
+
+# Local PCK inspection output
+final_bell_pck_audit/
+FinalBell_PCK_Audit/

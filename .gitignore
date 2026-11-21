@@ -23,3 +23,7 @@ desktop.ini
 !.env.example
 *.keystore
 *.jks
+
+# Local archive inventories and recovered binaries
+final_bell_audit/
+FinalBell_Audit/
